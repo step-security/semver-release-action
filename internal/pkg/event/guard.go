@@ -1,13 +1,12 @@
 package event
 
 import (
-	"io/ioutil"
 	"os"
 
-	"github.com/step-security/semver-release-action/internal/pkg/action"
-	"github.com/step-security/semver-release-action/internal/pkg/semver"
 	"github.com/google/go-github/v45/github"
 	"github.com/spf13/cobra"
+	"github.com/step-security/semver-release-action/internal/pkg/action"
+	"github.com/step-security/semver-release-action/internal/pkg/semver"
 )
 
 func GuardCommand() *cobra.Command {
@@ -106,11 +105,7 @@ func parseEvent(cmd *cobra.Command, filePath string) *github.PullRequestEvent {
 }
 
 func readEvent(cmd *cobra.Command, filePath string) []byte {
-	file, err := os.Open(filePath)
-	action.AssertNoError(cmd, err, "could not open GitHub event file: %s", err)
-	defer file.Close()
-
-	b, err := ioutil.ReadAll(file)
+	b, err := os.ReadFile(filePath) // #nosec G304 -- path comes from GITHUB_EVENT_PATH
 	action.AssertNoError(cmd, err, "could not read GitHub event file: %s", err)
 
 	return b

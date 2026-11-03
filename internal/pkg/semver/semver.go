@@ -1,8 +1,8 @@
 package semver
 
 import (
-	"github.com/step-security/semver-release-action/internal/pkg/action"
 	"github.com/spf13/cobra"
+	"github.com/step-security/semver-release-action/internal/pkg/action"
 )
 
 func Command() *cobra.Command {

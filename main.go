@@ -3,11 +3,11 @@ package main
 import (
 	"os"
 
+	"github.com/spf13/cobra"
 	"github.com/step-security/semver-release-action/internal/pkg/event"
 	"github.com/step-security/semver-release-action/internal/pkg/git"
 	"github.com/step-security/semver-release-action/internal/pkg/release"
 	"github.com/step-security/semver-release-action/internal/pkg/semver"
-	"github.com/spf13/cobra"
 )
 
 func main() {

@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/step-security/semver-release-action/internal/pkg/action"
 	"github.com/blang/semver/v4"
 	"github.com/google/go-github/v45/github"
 	"github.com/spf13/cobra"
+	"github.com/step-security/semver-release-action/internal/pkg/action"
 	"golang.org/x/oauth2"
 )
 

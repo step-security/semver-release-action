@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/step-security/semver-release-action/internal/pkg/action"
 	"github.com/google/go-github/v45/github"
 	"github.com/spf13/cobra"
+	"github.com/step-security/semver-release-action/internal/pkg/action"
 	"golang.org/x/oauth2"
 )
 

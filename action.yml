@@ -32,7 +32,7 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://ghcr.io/step-security/semver-release-action:v1.3.2@sha256:3237b54d56bf81a59180fbb2a699055d5b43262305b9edaea79f2960e4154698' # v1.3.2
   args:
     - ${{ inputs.release_branch }}
     - ${{ inputs.release_strategy }}

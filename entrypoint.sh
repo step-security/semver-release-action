@@ -54,7 +54,7 @@ RELEASE_STRATEGY="$2"
 NEXT_TAG="$3"
 TAG_FORMAT="$4"
 
-echo "::debug::Executing bumper guard release_branch=${RELEASE_BRANCH},github_event_path=${GITHUB_EVENT_PATH}"
+echo "Executing bumper guard release_branch=${RELEASE_BRANCH},github_event_path=${GITHUB_EVENT_PATH}"
 /bumper guard "${RELEASE_BRANCH}" "${GITHUB_EVENT_PATH}"
 if [ $? -eq 78 ]
 then

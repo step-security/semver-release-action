@@ -1,0 +1,4 @@
+[[IgnoredVulns]]
+id = "GO-2026-5932"
+ignoreUntil = 2027-05-03
+reason = "golang.org/x/crypto/openpgp is only pulled in transitively by go-github v45 (commit signing). This action never calls any OpenPGP code. Revisit when go-github is upgraded."

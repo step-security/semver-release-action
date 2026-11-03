@@ -1,0 +1,22 @@
+version: "2"
+
+linters:
+  enable:
+    - dupl
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gocyclo
+    - misspell
+    - nakedret
+    - prealloc
+    - unconvert
+    - unparam
+    - gosec
+    - gochecknoglobals
+    - lll # hard to fulfill
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
